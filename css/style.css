@@ -15,6 +15,7 @@ html {
   --Moderate-cyan: hsl(170, 45%, 43%);
   --Light-grayish-blue: hsl(240, 75%, 98%);
   --Light-gray: hsl(0, 0%, 75%);
+  --Light-blue: hsl(228, 45%, 44%);
   --Font-head: "Raleway", sans-serif;
   --Font-body: "Open Sans", sans-serif;
 }
@@ -532,6 +533,15 @@ body footer .container-all-footer .container-footer .footer-social-media .footer
   body footer .container-all-footer .container-footer .footer-social-media .footer-media-wrapper .footer-icon-media a .icon-facebook {
     padding: min(1.2vw, 1rem) min(1.2vw, 1.2rem);
   }
+}
+body footer .container-all-footer .attribution {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: clamp(0.8rem, 0.95vw, 1.5rem);
+}
+body footer .container-all-footer .attribution a {
+  color: var(--Light-blue);
 }
 
 /*# sourceMappingURL=style.css.map */
