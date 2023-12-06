@@ -1,0 +1,538 @@
+@use "reset" as *;
+@use "variables" as *;
+@use "classes" as *;
+@use "media-queries" as *;
+
+body {
+  header {
+    margin: 0 min(4vw, 5rem);
+
+    @include desktop {
+      margin: 0 min(5vw, 8rem);
+    }
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: min(5vw, 5rem);
+      margin-bottom: min(20vw, 10rem);
+
+      img {
+        width: min(20vw, 9rem);
+        height: min(6vw, 3rem);
+
+        @include desktop {
+          width: min(30vw, 15rem);
+          height: auto;
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: min(20vw, 2rem);
+
+        @include desktop {
+          gap: min(4.4vw, 8rem);
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        li {
+          list-style: none;
+          font-family: var(--Font-head);
+          color: var(--Very-dark-blue);
+          font-size: clamp(0.9rem, 4vw, 3rem);
+          font-weight: 400;
+
+          @include desktop {
+            font-size: clamp(0.9rem, 1.4vw, 2.5rem);
+          }
+        }
+      }
+    }
+
+    .container-header {
+      display: flex;
+      flex-direction: column;
+      row-gap: min(50vw, 4rem);
+
+      @include desktop {
+        flex-direction: row-reverse;
+      }
+
+      .box {
+        flex: 1;
+      }
+
+      .header-right {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .header-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: min(50vw, 2rem);
+
+        @include desktop {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        h1 {
+          font-family: var(--Font-body);
+          color: var(--Very-dark-blue);
+          font-size: clamp(2rem, 6vw, 4rem);
+          font-weight: 700;
+          text-align: center;
+
+          @include desktop {
+            font-size: clamp(1.1rem, 3vw, 6rem);
+            text-align: left;
+          }
+        }
+
+        p {
+          font-family: var(--Font-body);
+          color: var(--Very-dark-blue);
+          font-size: clamp(1rem, 4.5vw, 2rem);
+          font-weight: 400;
+          text-align: center;
+
+          @include desktop {
+            font-size: clamp(1rem, 1.4vw, 3rem);
+            text-align: left;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          row-gap: min(50vw, 1rem);
+
+          @include desktop {
+            flex-direction: row;
+
+            input {
+              width: 45%;
+              margin-right: min(0.7vw, 2rem);
+            }
+
+            button {
+              width: 25%;
+              box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-background-body {
+    margin-top: min(30vw, 8rem);
+    background-image: url("../images/bg-curve-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: min(30vh, 7rem);
+
+
+    @include desktop {
+      background-image: url("../images/bg-curve-desktop.svg");
+      margin-top: min(20vh, 25rem);
+      padding-bottom: min(5.29vh, 15rem);
+    }
+
+    .container-body {
+      padding-top: min(30vw, 8rem);
+      margin: 0 min(4vw, 5rem) 0 min(4vw, 5rem);
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include desktop {
+        flex-direction: row;
+        margin: 0 min(5vw, 8rem);
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: min(50vw, 2rem);
+
+        @include desktop {
+          row-gap: min(50vh, 3rem);
+          align-items: start;
+          margin-right: min(50vw, 4rem);
+        }
+
+        h2 {
+          font-family: var(--Font-head);
+          color: var(--Very-dark-blue);
+          font-size: clamp(0.9rem, 4vw, 2rem);
+          font-weight: 700;
+
+          @include desktop {
+            font-size: clamp(1.1rem, 2.61vw, 5rem);
+          }
+        }
+
+        p {
+          font-family: var(--Font-body);
+          color: var(--Desaturated-blue);
+          font-size: clamp(0.9rem, 4vw, 2rem);
+          font-weight: 400;
+
+          @include desktop {
+            color: var(--Very-dark-blue);
+            font-size: clamp(1rem, 1.3vw, 2.5rem);
+          }
+        }
+
+        .underline-bottom {
+          margin: 2rem 0;
+          border-bottom: 1px solid var(--Moderate-cyan);
+
+          &:hover {
+            opacity: 0.65;
+          }
+
+          @include desktop {
+            margin: 0 0;
+          }
+
+          a {
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            font-family: var(--Font-body);
+            font-size: clamp(0.9rem, 3.5vw, 2rem);
+            color: var(--Moderate-cyan);
+            text-decoration: none;
+            gap: 0.5rem;
+
+            @include desktop {
+              font-size: clamp(1rem, 1.3vw, 2.5rem);
+            }
+          }
+        }
+
+        .card {
+          padding: min(6vw, 2rem) min(6vw, 2rem);
+          border-radius: 3px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+          background-color: white;
+
+
+          @include desktop {
+            padding: min(6vw, 3rem) min(6vw, 3rem);
+            width: min(30vw, 47rem);
+            display: flex;
+            flex-direction: column;
+            row-gap: min(1vw, 1.5rem);
+          }
+
+          img {
+            width: min(3vw, 2rem);
+            height: auto;
+
+            @include desktop {
+              width: min(1.5vw, 2.5rem);
+            }
+          }
+
+          p {
+            font-family: var(--Font-body);
+            color: var(--Very-dark-blue);
+            font-size: clamp(1rem, 3.5vw, 2rem);
+            font-weight: 400;
+            line-height: 2.5rem;
+
+            @include desktop {
+              font-size: clamp(1rem, 1.16vw, 2.5rem);
+            }
+          }
+
+          .person {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+              width: min(20vw, 3rem);
+              height: min(8vw, 5rem);
+              border-radius: 25px;
+
+              @include desktop {
+                width: min(20vw, 5rem);
+              }
+            }
+
+            .person-name {
+              h2 {
+                font-size: clamp(1rem, 3vw, 2rem);
+
+                @include desktop {
+                  font-size: clamp(0.6rem, 1.16vw, 1.7rem);
+                }
+              }
+
+              p {
+                font-size: clamp(0.6rem, 1.16vw, 1.7rem);
+
+                @include desktop {
+                  font-size: clamp(0.6rem, 1.16vw, 1.3rem);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: auto;
+
+          @include desktop {
+            width: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .background-early-access {
+    background-color: var(--Desaturated-blue);
+
+    .container-early-access {
+      padding: min(15vw, 6rem) min(11vw, 4rem);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: min(50vw, 1.5rem);
+
+      @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: min(8vh, 10rem) 0;
+        margin: 0 min(5vw, 8rem);
+      }
+
+      .early-access-left {
+        @include desktop {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+          width: min(35vw, 55rem);
+        }
+
+        h2 {
+          font-family: var(--Font-body);
+          font-size: clamp(0.9rem, 4vw, 2rem);
+          font-weight: 700;
+          text-align: center;
+
+          @include desktop {
+            font-size: clamp(1.1rem, 2.61vw, 5rem);
+            text-align: left;
+          }
+        }
+
+        p {
+          font-family: var(--Font-body);
+          font-size: clamp(1rem, 3.5vw, 2rem);
+          font-weight: 400;
+          line-height: 2rem;
+          text-align: center;
+
+          @include desktop {
+            text-align: start;
+            font-size: clamp(0.8rem, 1.1vw, 1.8rem);
+            color: var(--Light-grayish-blue);
+          }
+        }
+      }
+
+      .early-access-right {
+        form {
+          display: flex;
+          flex-direction: column;
+          row-gap: min(50vw, 1rem);
+
+          input {
+            padding: min(6vw, 1rem) min(10vw, 4rem);
+
+            @include desktop {
+              padding: min(6vw, 1rem) min(10vw, 16rem);
+
+            }
+          }
+
+          @include desktop {
+            button {
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: min(15vh, 6rem) 0;
+    background-color: var(--Very-dark-blue);
+    color: white;
+    font-family: var(--Font-body);
+
+    @include desktop {
+      padding: min(10vh, 10rem) 0;
+    }
+
+    .container-all-footer {
+      margin: 0 0 0 min(5vw, 8rem);
+
+      @include desktop {
+        margin: 0 0 0 min(5vw, 8rem);
+      }
+
+      img {
+        width: 35%;
+
+        @include desktop {
+          width: 13%;
+        }
+      }
+
+      .container-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 2rem;
+
+
+        @include desktop {
+          flex-direction: row;
+          font-size: clamp(0.8rem, 0.95vw, 2.3rem);
+          gap: 0;
+        }
+
+        .footer-contact {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+          row-gap: 1rem;
+
+          .footer-contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+              width: 3%;
+            }
+          }
+        }
+
+        .footer-menu {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+
+          @include desktop {
+            flex-direction: row;
+            gap: min(30vw, 20rem);
+          }
+
+          .left-footer {
+            margin-bottom: 1.5rem;
+
+            li {
+              list-style: none;
+              text-decoration: none;
+              margin-bottom: 1rem;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .right-footer {
+            li {
+              list-style: none;
+              text-decoration: none;
+              margin-bottom: 1rem;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .footer-social-media {
+          display: flex;
+          flex: 1 1 auto;
+          justify-content: center;
+          align-items: center;
+
+          @include desktop {
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+
+          .footer-media-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem 1rem;
+
+            .footer-icon-media {
+              border: 1px solid white;
+              border-radius: 25px;
+
+              &:hover {
+                border: 1px solid var(--Bright-blue);
+                border-radius: 25px;
+              }
+
+              a {
+                font-size: 1rem;
+                color: white;
+
+                &:hover {
+                  color: var(--Bright-blue);
+                }
+
+                i {
+                  padding: 1rem;
+                }
+
+                .icon-facebook {
+                  padding: 1rem 1.2rem;
+
+                  @include desktop {
+                    padding: min(1.2vw, 1rem) min(1.2vw, 1.2rem);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

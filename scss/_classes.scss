@@ -1,0 +1,22 @@
+.btn-primary {
+  padding: min(6vw, 1rem) 0 min(6vw, 1rem) 0;
+  background-color: var(--Bright-blue);
+  color: white;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.65;
+  }
+}
+
+.input-primary {
+  padding: min(6vw, 1rem) min(6vw, 1rem);
+
+  &::placeholder {
+    text-align: left;
+    font-family: var(--Font-body);
+    color: rgba(0, 0, 0, 0.2);
+  }
+}
