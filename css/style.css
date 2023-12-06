@@ -191,6 +191,7 @@ body .container-background-body .container-body {
   }
 }
 body .container-background-body .container-body .left {
+  margin-top: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,6 +200,7 @@ body .container-background-body .container-body .left {
 }
 @media (min-width: 1024px) {
   body .container-background-body .container-body .left {
+    margin-top: 0;
     row-gap: min(50vh, 3rem);
     align-items: start;
     margin-right: min(50vw, 4rem);
@@ -363,6 +365,7 @@ body .background-early-access .container-early-access {
   }
 }
 body .background-early-access .container-early-access .early-access-left h2 {
+  margin-bottom: 2rem;
   font-family: var(--Font-body);
   font-size: clamp(0.9rem, 4vw, 2rem);
   font-weight: 700;
@@ -370,6 +373,7 @@ body .background-early-access .container-early-access .early-access-left h2 {
 }
 @media (min-width: 1024px) {
   body .background-early-access .container-early-access .early-access-left h2 {
+    margin-bottom: 0;
     font-size: clamp(1.1rem, 2.61vw, 5rem);
     text-align: left;
   }

@@ -161,6 +161,7 @@ body {
       }
 
       .left {
+        margin-top: 7rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -168,6 +169,7 @@ body {
         row-gap: min(50vw, 2rem);
 
         @include desktop {
+          margin-top: 0;
           row-gap: min(50vh, 3rem);
           align-items: start;
           margin-right: min(50vw, 4rem);
@@ -340,12 +342,14 @@ body {
         }
 
         h2 {
+          margin-bottom: 2rem;
           font-family: var(--Font-body);
           font-size: clamp(0.9rem, 4vw, 2rem);
           font-weight: 700;
           text-align: center;
 
           @include desktop {
+            margin-bottom: 0;
             font-size: clamp(1.1rem, 2.61vw, 5rem);
             text-align: left;
           }
