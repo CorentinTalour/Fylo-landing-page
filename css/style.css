@@ -365,7 +365,7 @@ body .background-early-access .container-early-access {
   }
 }
 body .background-early-access .container-early-access .early-access-left h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   font-family: var(--Font-body);
   font-size: clamp(0.9rem, 4vw, 2rem);
   font-weight: 700;
