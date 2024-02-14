@@ -505,16 +505,8 @@ body {
             gap: 1rem 1rem;
 
             .footer-icon-media {
-              border: 1px solid white;
-              border-radius: 25px;
-
-              &:hover {
-                border: 1px solid var(--Bright-blue);
-                border-radius: 25px;
-              }
-
               a {
-                font-size: 1rem;
+                font-size: 2rem;
                 color: white;
 
                 &:hover {
@@ -523,14 +515,6 @@ body {
 
                 i {
                   padding: 1rem;
-                }
-
-                .icon-facebook {
-                  padding: 1rem 1.2rem;
-
-                  @include desktop {
-                    padding: min(1.2vw, 1rem) min(1.2vw, 1.2rem);
-                  }
                 }
               }
             }
