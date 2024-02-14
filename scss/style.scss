@@ -7,6 +7,10 @@ body {
   header {
     margin: 0 min(4vw, 5rem);
 
+    @include Tablet {
+      margin: 0 min(5vw, 8rem);
+    }
+
     @include desktop {
       margin: 0 min(5vw, 8rem);
     }
@@ -22,6 +26,11 @@ body {
         width: min(20vw, 9rem);
         height: min(6vw, 3rem);
 
+        @include Tablet {
+          width: min(20vw, 12rem);
+          height: auto;
+        }
+
         @include desktop {
           width: min(30vw, 15rem);
           height: auto;
@@ -31,6 +40,10 @@ body {
       ul {
         display: flex;
         gap: min(20vw, 2rem);
+
+        @include Tablet {
+          gap: min(4.4vw, 4rem);
+        }
 
         @include desktop {
           gap: min(4.4vw, 8rem);
@@ -46,6 +59,10 @@ body {
           color: var(--Very-dark-blue);
           font-size: clamp(0.9rem, 4vw, 3rem);
           font-weight: 400;
+
+          @include Tablet {
+            font-size: clamp(0.9rem, 1.4vw, 2.5rem);
+          }
 
           @include desktop {
             font-size: clamp(0.9rem, 1.4vw, 2.5rem);
@@ -116,17 +133,36 @@ body {
           flex-direction: column;
           row-gap: min(50vw, 1rem);
 
+          @include Tablet {
+            align-items: center;
+          }
+
           @include desktop {
             flex-direction: row;
 
             input {
               width: 45%;
               margin-right: min(0.7vw, 2rem);
+
+              @include Tablet {
+                .input-primary {
+                  background-color: red;
+                }
+                width: 75%;
+                padding: min(6vw, 1rem) min(20vw, 20rem);
+                //width: 100%;
+
+                margin-right: 0;
+              }
             }
 
             button {
               width: 25%;
               box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+              @include Tablet {
+                padding: min(6vw, 1rem) min(20vw, 20rem);
+              }
             }
           }
         }
@@ -505,16 +541,16 @@ body {
             gap: 1rem 1rem;
 
             .footer-icon-media {
-              border: 1px solid white;
+              //border: 1px solid white;
               border-radius: 25px;
 
               &:hover {
-                border: 1px solid var(--Bright-blue);
+                //border: 1px solid var(--Bright-blue);
                 border-radius: 25px;
               }
 
               a {
-                font-size: 1rem;
+                font-size: 2rem;
                 color: white;
 
                 &:hover {
@@ -522,16 +558,16 @@ body {
                 }
 
                 i {
-                  padding: 1rem;
+                  padding: 10rem;
                 }
 
-                .icon-facebook {
-                  padding: 1rem 1.2rem;
-
-                  @include desktop {
-                    padding: min(1.2vw, 1rem) min(1.2vw, 1.2rem);
-                  }
-                }
+                //.icon-facebook {
+                //  padding: 1rem 1.2rem;
+                //
+                //  @include desktop {
+                //    padding: min(1.2vw, 1rem) min(1.2vw, 1.2rem);
+                //  }
+                //}
               }
             }
           }
